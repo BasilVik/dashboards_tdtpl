@@ -3,7 +3,5 @@ from . import views
 
 urlpatterns = [
     # Главная страница
-    path('', views.index),
-    # Страница дашборда Продажи
-    path('sales_dashboard/', views.sales_dashboard),
+    path('', views.index, name='index'),
 ] 

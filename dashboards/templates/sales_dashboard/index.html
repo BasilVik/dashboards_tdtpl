@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+<body>
+  <header>
+    {% include 'includes/header.html' %}      
+  </header>
+  {% block content %} 
+  <div class="container py-5">
+    {{title}}
+    {{text}}
+  </div>
+  {% endblock %}         
+  <footer class="border-top text-center py-3">
+    {% include 'includes/footer.html' %}     
+  </footer>
+</body>
