@@ -2,11 +2,12 @@ from django.shortcuts import render
 
 
 # Главная страница
-def index(request):    
+def sales_dashboard(request):    
     template = 'sales_dashboard/index.html'
-    title = 'Главная страница'
+    title = 'Данные по продажам'
+    text = 'Текст страницы'
     context = {
         'title': title,
-        'text': 'Главная страница',
+        'text': text,
     }
     return render(request, template, context)

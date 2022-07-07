@@ -9,8 +9,10 @@
   </header>
   {% block content %} 
   <div class="container py-5">
-    {{title}}
-    {{text}}
+    <h1>{{title}}</h1>
+    <p>
+      {% include 'sales_dashboard/table_sales.html' %}
+    </p>
   </div>
   {% endblock %}         
   <footer class="border-top text-center py-3">

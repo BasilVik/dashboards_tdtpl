@@ -1,6 +1,6 @@
 asgiref==3.4.1
 attrs==21.4.0
-Django==3.2.14
+Django==2.2.19
 flake8==4.0.1
 importlib-metadata==4.2.0
 iniconfig==1.1.1
