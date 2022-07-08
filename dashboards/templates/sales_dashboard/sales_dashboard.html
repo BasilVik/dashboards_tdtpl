@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+<body>
+  <header>
+    {% include 'includes/header.html' %}      
+  </header>
+  {% block content %} 
+  <div class="container py-5">
+    <h1>{{title}}</h1>
+    <p>
+    <div class="container py-5"></div>
+      <table border="1">
+        <tr>
+          <td>Год</td>
+          <td>Месяц</td>
+          <td>Продажи</td>
+        </tr>
+        {% for row in file_data %}
+        <tr>
+          <td>{{row.year}}</td>
+          <td>{{row.month}}</td>
+          <td>{{row.sales}}</td>
+      </tr>
+       {% endfor %}
+      </table>
+    </div>
+    </p>
+  </div>
+  {% endblock %}         
+  <footer class="border-top text-center py-3">
+    {% include 'includes/footer.html' %}     
+  </footer>
+</body>
