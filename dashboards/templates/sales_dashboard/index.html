@@ -11,6 +11,9 @@
   <div class="container py-5">
     <h1>{{title}}</h1>
     <a href="{% url 'sales_dashboard:sales_dashboard' %}">Данные по продажам</a>
+    <a href="{% url 'sales_dashboard:bank_dashboard' %}">Данные по счетам</a>
+    <a href="{% url 'sales_dashboard:account_total_dashboard' %}">Данные по взаиморасчетам общие</a>
+    <a href="{% url 'sales_dashboard:account_dashboard' %}">Данные по взаиморасчетам детальные</a>
   </div>
   {% endblock %}         
   <footer class="border-top text-center py-3">
