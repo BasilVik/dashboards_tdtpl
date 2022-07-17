@@ -3,7 +3,7 @@ import csv
 
 def index(request):
     template = 'sales_dashboard/index.html'
-    title = 'Главная страница'
+    title = 'Аналитика'
     context = {
         'title': title,
     }
