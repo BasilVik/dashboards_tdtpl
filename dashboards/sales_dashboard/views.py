@@ -23,6 +23,20 @@ def sales_dashboard(request):
         }
         return render(request, template, context)
 
+def sales_astor_dashboard(request):    
+    template = 'sales_dashboard/sales_dashboard.html'
+    title = 'Данные по продажам Астор'
+
+    with open("/home/vasiliy/Dev/dashboards_tdtpl/dashboards/sales_dashboard/data/sales_astor.csv", encoding='utf-8') as r_file:
+        fieldnames = ['year', 'month_number', 'month', 'sales']
+        file_data = csv.DictReader(r_file, delimiter = "|", fieldnames = fieldnames)
+
+        context = {
+            'title': title,
+            'file_data': file_data,
+        }
+        return render(request, template, context)
+
 def bank_dashboard(request):
     template = 'sales_dashboard/bank_dashboard.html'
     title = 'Данные по счетам'
